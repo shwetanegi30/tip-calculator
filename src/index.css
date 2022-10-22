@@ -76,7 +76,7 @@ body {
 }
 
 .number-input.number-error:focus {
-  box-shadow: 0 0 0 .2rem red;
+  box-shadow: 0 0 0 .2rem rgb(213, 113, 113);
 }
 
 .number-input:hover {
