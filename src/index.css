@@ -93,7 +93,7 @@ input::-webkit-inner-spin-button {
 
 .icon {
   position: absolute;
-  top: 35%;
+  top: 37%;
   left: 25px;
   transform: translate(-50%);
   pointer-events: none;
