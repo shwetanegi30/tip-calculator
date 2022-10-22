@@ -1,0 +1,244 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'space Mono', monospace;
+  font-size: 1.5rem;
+  background-color: hsl(185, 41%, 84%);
+}
+
+::selection {
+  background-color: hsl(172, 67%, 45%);
+  color: white;
+}
+
+.wrapper {
+  display: grid;
+  gap: 4rem;
+  place-items: center;
+}
+
+.container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 1px 1px 5px hsl(185, 41%, 84%);
+  display: grid;
+  grid-auto-flow: column;
+  gap: 50px;
+}
+
+@media screen and (max-width:700px) {
+
+  .container {
+    display: block;
+  }
+}
+
+.logo {
+  margin-top: 55px;
+}
+
+
+/* form */
+
+.form {
+  display: grid;
+  gap: var(--spacer);
+}
+
+.label-group {
+  display: grid;
+  text-align: left;
+  padding-top: 25px;
+}
+
+.label {
+  font-size: 16px;
+  color: hsl(186, 14%, 43%);
+}
+
+.number-input {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  text-align: right;
+  background-color: hsl(189, 41%, 97%);
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.number-input.number-error:focus {
+  box-shadow: 0 0 0 .2rem red;
+}
+
+.number-input:hover {
+  border: 2px solid hsl(172, 67%, 45%);
+}
+
+.number-wrapper {
+  position: relative;
+  padding-top: 8px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.icon {
+  position: absolute;
+  top: 35%;
+  left: 25px;
+  transform: translate(-50%);
+  pointer-events: none;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+}
+
+.number-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 .2rem hsl(185, 41%, 84%),
+    hsl(173, 61%, 73%);
+}
+
+.label-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.error {
+  font-size: 16px;
+  color: red;
+}
+
+.tip-section {
+  display: grid;
+  gap: 1rem;
+  justify-items: start;
+  padding-top: 25px;
+}
+
+.tip-amount-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 0.5fr);
+  gap: 0.6rem;
+}
+
+
+@media screen and (max-width:700px) {
+
+  .tip-amount-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.tip-input {
+  opacity: 0;
+  inset: 0;
+  position: absolute;
+  cursor: pointer;
+}
+
+.tip-amount {
+  position: relative;
+  text-align: center;
+  border-radius: 6px;
+  display: grid;
+}
+
+.tip-btn {
+  background-color: hsl(183, 100%, 15%);
+  color: white;
+  border-radius: 4px;
+  padding: 5px 0;
+}
+
+.tip-btn:hover {
+  background-color: hsl(173, 61%, 73%);
+}
+
+.tip-custom {
+  width: 100%;
+  height: 100%;
+  background-color: hsl(189, 41%, 97%);
+  border: none;
+}
+
+.tip-custom::placeholder {
+  font-size: 20px;
+  color: hsl(183, 100%, 15%);
+  text-align: center;
+}
+
+
+/* display */
+
+.display {
+  width: 330px;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 15px;
+  color: white;
+}
+
+@media screen and (max-width:700px) {
+
+  .display {
+    margin-top: 30px;
+    width: auto;
+  }
+}
+
+.display-row {
+  padding: 10px 40px;
+}
+
+.display-amt {
+  font-size: 28px;
+  color: hsl(172, 67%, 45%);
+}
+
+.dis-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  padding-top: 45px;
+}
+
+.unit {
+  color: hsl(172, 67%, 45%);
+  font-size: 12px;
+}
+
+.btn {
+  width: 91%;
+  height: 13%;
+  margin: 55px 0px 32px 15px;
+  border-radius: 6px;
+  border: none;
+  background-color: hsl(172, 67%, 45%);
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: hsl(183, 100%, 15%);
+  font-size: 20px;
+}
+
+.btn:hover {
+  background-color: hsl(173, 61%, 73%);
+}
+
+@media screen and (max-width:700px) {
+
+  .btn {
+    padding: 10px 16px;
+  }
+}
